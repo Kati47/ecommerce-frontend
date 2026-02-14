@@ -56,239 +56,6 @@ type Cart = {
   subtotal: number;
 };
 
-const MOCK_PRODUCTS: ApiProduct[] = [
-  {
-    _id: "698e3ff70fdec12b2f4bb37b",
-    name: "Jean Paul Gaultier Scandal Pour Femme",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb37d",
-    name: "Dior J'adore",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb37e",
-    name: "Baccarat Rouge 540",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb37f",
-    name: "Kayali Marshmallow 81",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb380",
-    name: "Tom Ford Black Orchid",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb381",
-    name: "Chanel No. 5",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb382",
-    name: "Yves Saint Laurent Black Opium",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb383",
-    name: "Guerlain La Vie est Belle",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb384",
-    name: "Marc Jacobs Daisy",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb385",
-    name: "Lancôme La Vie en Rose",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb386",
-    name: "Dolce & Gabbana The One",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb365",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb387",
-    name: "Prada L'Homme",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb388",
-    name: "Bleu de Chanel",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb389",
-    name: "Acqua di Gio",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb38a",
-    name: "Dior Sauvage",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb38b",
-    name: "Jean Paul Gaultier Le Male",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb38c",
-    name: "Tom Ford Noir",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb38d",
-    name: "Creed Aventus",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb38e",
-    name: "Yves Saint Laurent La Nuit",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb38f",
-    name: "Versace Eros",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-  {
-    _id: "698e3ff70fdec12b2f4bb390",
-    name: "Calvin Klein Obsession",
-    description: "",
-    price: 50,
-    images: ["kiiiiiii.png"],
-    category: "698e3ff70fdec12b2f4bb366",
-    totalStock: 20,
-    notes: {},
-    variants: [],
-  },
-];
 
 const toSlug = (value: string) =>
   value
@@ -311,29 +78,23 @@ export default function ProductDetailsPage({
     const getParams = async () => {
       const { slug: paramSlug } = await params;
       setSlug(paramSlug);
-      
-      // Comment out actual API call and use mock data instead
-      // try {
-      //   const response = await fetch(`${API_BASE_URL}/products`);
-      //   if (response.ok) {
-      //     const products = (await response.json()) as ApiProduct[];
-      //     const foundProduct = products.find((p) => toSlug(p.name) === paramSlug) ?? null;
-      //     if (foundProduct) {
-      //       setProduct(foundProduct);
-      //     } else {
-      //       setNotFoundError(true);
-      //     }
-      //   }
-      // } catch (err) {
-      //   console.error("Failed to fetch product:", err);
-      //   setNotFoundError(true);
-      // }
 
-      // Using mock data for frontend demo
-      const foundProduct = MOCK_PRODUCTS.find((p) => toSlug(p.name) === paramSlug) ?? null;
-      if (foundProduct) {
-        setProduct(foundProduct);
-      } else {
+      try {
+        const response = await fetch(`${API_BASE_URL}/products`);
+        if (response.ok) {
+          const products = (await response.json()) as ApiProduct[];
+          const foundProduct =
+            products.find((p) => toSlug(p.name) === paramSlug) ?? null;
+          if (foundProduct) {
+            setProduct(foundProduct);
+          } else {
+            setNotFoundError(true);
+          }
+        } else {
+          setNotFoundError(true);
+        }
+      } catch (err) {
+        console.error("Failed to fetch product:", err);
         setNotFoundError(true);
       }
     };
@@ -343,22 +104,18 @@ export default function ProductDetailsPage({
   }, [params]);
 
   const fetchCart = async () => {
-    // Comment out actual API call for now
-    // try {
-    //   const response = await fetch(`${API_BASE_URL}/cart`, {
-    //     credentials: "include",
-    //   });
+    try {
+      const response = await fetch(`${API_BASE_URL}/cart`, {
+        credentials: "include",
+      });
 
-    //   if (response.ok) {
-    //     const data = (await response.json()) as Cart;
-    //     setCart(data);
-    //   }
-    // } catch (error) {
-    //   console.error("Error fetching cart:", error);
-    // }
-
-    // Mock cart for now
-    setCart(null);
+      if (response.ok) {
+        const data = (await response.json()) as Cart;
+        setCart(data);
+      }
+    } catch (error) {
+      console.error("Error fetching cart:", error);
+    }
   };
 
   const isProductInCart = product ? cart?.items.some((item) => item.productId._id === product._id) : false;
@@ -368,29 +125,27 @@ export default function ProductDetailsPage({
 
     setIsAddingToCart(true);
     try {
-      // Comment out actual API call and just show success
-      // const response = await fetch(`${API_BASE_URL}/cart/add`, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   credentials: "include",
-      //   body: JSON.stringify({
-      //     item: {
-      //       productId: product._id,
-      //       quantity: quantity,
-      //     },
-      //   }),
-      // });
+      const response = await fetch(`${API_BASE_URL}/cart/add`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          item: {
+            productId: product._id,
+            quantity: quantity,
+          },
+        }),
+      });
 
-      // if (!response.ok) {
-      //   const error = await response.json();
-      //   throw new Error(error.error || "Failed to add to cart");
-      // }
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || "Failed to add to cart");
+      }
 
-      // await fetchCart();
+      await fetchCart();
 
-      // Mock success for demo
       toast({
         title: "Added to cart",
         description: `${quantity} × ${product.name}`,
