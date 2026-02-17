@@ -124,10 +124,7 @@ export default function CartPage() {
 
   const summary = useMemo(() => {
     const subtotal = cart?.subtotal ?? 0;
-    const shipping = subtotal > 0 ? 18 : 0;
-    const discount = subtotal > 0 ? 10 : 0;
-    const total = Math.max(subtotal + shipping - discount, 0);
-    return { subtotal, shipping, discount, total };
+    return { subtotal };
   }, [cart]);
 
   if (isLoading) {
@@ -249,19 +246,11 @@ export default function CartPage() {
                 <span>Subtotal</span>
                 <span>${summary.subtotal}</span>
               </div>
-              <div className="flex items-center justify-between">
-                <span>Shipping</span>
-                <span>${summary.shipping}</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span>Discount</span>
-                <span>-${summary.discount}</span>
-              </div>
             </div>
             <Separator className="bg-[#C6A87D]/30" />
             <div className="flex items-center justify-between text-base font-medium text-foreground">
               <span>Total</span>
-              <span>${summary.total}</span>
+              <span>${summary.subtotal}</span>
             </div>
             <Button className="w-full" asChild disabled={items.length === 0}>
               <Link href="/checkout">Proceed to Checkout</Link>
